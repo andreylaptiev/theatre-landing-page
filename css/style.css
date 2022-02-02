@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'OpenSansCondensed-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/OpenSansCondensed-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'OpenSansCondensed-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: url(../fonts/OpenSansCondensed-Light.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/OpenSans-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  src: url(../fonts/OpenSans-SemiBold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/OpenSans-Regular.woff2) format("woff2");
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  max-width: 1920px;
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'OpenSansCondensed-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'OpenSansCondensed-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-family: 'OpenSansCondensed-Light', sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-family: 'OpenSansCondensed-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+.container {
+  padding: 0 405px;
+}
+
+header {
+  min-height: 1045px;
+  padding: 50px 0 0 0;
+  background-image: url(../img/header-bg.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top__navbar-item {
+  margin-right: 63px;
+}
+
+.header-top__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 120px;
+}
+
+.header-top__phone::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 119px;
+  height: 2px;
+  background-color: #d1a954;
+}
+
+.header-top__phone-item {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
