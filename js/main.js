@@ -40,3 +40,13 @@ function defaultImage(e) {
 const socialImages = document.querySelectorAll('.header-side__social-image');
 socialImages.forEach(image => image.addEventListener('mouseover', activeImage));
 socialImages.forEach(image => image.addEventListener('mouseout', defaultImage));
+
+
+// sticky navbar
+const navbar = document.querySelector('.header-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= 20)
+    navbar.classList.add('sticky');
+  else
+    navbar.classList.remove('sticky');
+});
