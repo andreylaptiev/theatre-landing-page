@@ -123,11 +123,6 @@ header {
   }
 }
 
-header .container {
-  position: sticky;
-  top: 20px;
-}
-
 .header-top a:hover,
 .header-top a:active {
   color: $gold;
@@ -214,6 +209,19 @@ header .container {
   transition: all 0.4s ease 0.2s;
 }
 
+.sticky {
+  width: 100%;
+  padding: 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $dark;
+}
+
+.header-top.sticky .header-top__menu._active {
+  transform: translate(207px, 8px);
+}
+
 @media (min-width: 576px) {
   .header-top__menu {
     transition: all 0.4s ease-in-out;
@@ -238,6 +246,9 @@ header .container {
       width: 22px;
     }
   }
+  .sticky {
+    padding: 20px 33px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -250,6 +261,9 @@ header .container {
       margin-top: 50px;
     }
   }
+  .sticky {
+    padding: 20px 109px 20px 191px;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -261,6 +275,9 @@ header .container {
     &__phone {
       margin-top: 0px;
     }
+  }
+  .sticky {
+    padding: 20px 405px;
   }
 }
 
