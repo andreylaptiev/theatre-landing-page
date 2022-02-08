@@ -33,7 +33,7 @@
   src: url(../fonts/OpenSans-Regular.woff2) format("woff2");
 }
 
-.header-top__phone {
+.header-top__phone, .header-main__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,4 +588,50 @@ header {
   .header-side {
     display: none;
   }
+}
+
+.header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 190px;
+}
+
+.header-main__description {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 540px;
+  padding-top: 115px;
+  margin-right: 125px;
+}
+
+.header-main__description > p, .header-main__description a {
+  margin-top: 50px;
+}
+
+.button {
+  width: 160px;
+  height: 50px;
+  padding: 16px 47px;
+  font-family: 'OpenSansCondensed-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: #d1a954;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #989898;
 }

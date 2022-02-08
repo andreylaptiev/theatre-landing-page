@@ -434,3 +434,37 @@ header {
     display: none;
   }
 }
+
+.header-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 190px;
+  &__description {
+    @extend %disp-flex-col;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 540px;
+    padding-top: 115px;
+    margin-right: 125px;
+    &>p,a {
+      margin-top: 50px;
+    }
+  }
+}
+
+.button {
+  width: 160px;
+  height: 50px;
+  padding: 16px 47px;
+  font-family: 'OpenSansCondensed-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: $gold;
+  cursor: pointer;
+  &:hover {
+    background-color: $grey;
+  }
+}
