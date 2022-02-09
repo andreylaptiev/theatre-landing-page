@@ -33,7 +33,7 @@
   src: url(../fonts/OpenSans-Regular.woff2) format("woff2");
 }
 
-.header-top__phone, .header-main__description {
+.header-top__phone, .header-main__description, .header-main__slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,6 +286,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   background-color: #333333;
 }
 
@@ -610,13 +611,39 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  max-width: 540px;
+  min-width: 540px;
   padding-top: 115px;
   margin-right: 125px;
 }
 
 .header-main__description > p, .header-main__description a {
   margin-top: 50px;
+}
+
+.header-main__slider {
+  width: 370px;
+}
+
+.swiper {
+  width: 370px;
+  height: 570px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  top: 100%;
+  padding: 0 50px 25px 50px;
+}
+
+@media (max-width: 992px) {
+  .header-main__slider {
+    display: none;
+  }
 }
 
 .button {
@@ -633,5 +660,6 @@ header {
 }
 
 .button:hover {
-  background-color: #989898;
+  background-color: #fff;
+  color: #d1a954;
 }
