@@ -50,3 +50,12 @@ window.addEventListener('scroll', () => {
   else
     navbar.classList.remove('sticky');
 });
+
+
+// header-main swiper
+const headerSwiper = new Swiper('.swiper', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

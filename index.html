@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,
       maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>Большой театр</title>
   </head>
   <body>
@@ -77,12 +79,36 @@
             </div>
           </div>
           <div class="header-main">
-            <div class="header-main__text"></div>
-            <div class="header-main__slider"></div>
+            <div class="header-main__description">
+              <h1 class="header-main__title">БОЛЬШОЙ ТЕАТР</h1>
+              <p class="text">
+                Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.
+              </p>
+              <a href="#" class="button">АФИША</a>
+            </div>
+            <div class="header-main__slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/poster.png" alt="poster">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/poster.png" alt="poster">
+                  </div>
+                </div>
+                <div class="swiper-button-next">
+                  <img src="img/next-button.svg" alt="next button">
+                </div>
+                <div class="swiper-button-prev">
+                  <img src="img/prev-button.svg" alt="prev button">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
   </html>

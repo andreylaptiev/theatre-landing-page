@@ -85,7 +85,13 @@ h3 {
   padding: 0 405px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1650px) {
+  .container {
+    padding: 0 200px;
+  }
+}
+
+@media (max-width: 1280px) {
   .container {
     padding: 0 109px 0 191px;
   }
@@ -213,10 +219,17 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   background-color: $dark;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1650px) {
+  .sticky {
+    padding: 20px 200px;
+  }
+}
+
+@media (max-width: 1280px) {
   .sticky {
     padding: 20px 109px 20px 191px;
   }
@@ -225,6 +238,12 @@ header {
 @media (max-width: 768px) {
   .sticky {
     padding: 20px 35px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .header-top.sticky .header-top__phone {
+    margin-top: 20px;
   }
 }
 
@@ -288,6 +307,14 @@ header {
   }
   &__social {
     display: none;
+  }
+}
+
+@media (max-width: 1440px) {
+  .navigation {
+    &__link {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -432,5 +459,103 @@ header {
 @media (max-width: 768px) {
   .header-side {
     display: none;
+  }
+}
+
+.header-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 190px;
+  &__description {
+    @extend %disp-flex-col;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 540px;
+    padding-top: 115px;
+    margin-right: 125px;
+    &>p,a {
+      margin-top: 50px;
+    }
+  }
+  &__slider {
+    @extend %disp-flex-col;
+    width: 370px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header-main {
+  &__description {
+    margin-right: 70px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header-main {
+    padding-top: 230px;
+  &__description {
+    padding-top: 0;
+    margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header-main {
+    justify-content: center;
+    padding-top: 170px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-main {
+    padding-top: 115px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-main {
+    padding-top: 80px;
+  }
+}
+
+.swiper {
+  width: 370px;
+  height: 570px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  top: 100%;
+  padding: 0 50px 25px 50px;
+}
+
+@media (max-width: 992px) {
+  .header-main__slider {
+    display: none;
+  }
+}
+
+.button {
+  width: 160px;
+  height: 50px;
+  padding: 16px 47px;
+  font-family: 'OpenSansCondensed-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: $gold;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff;
+    color: $gold;
   }
 }
