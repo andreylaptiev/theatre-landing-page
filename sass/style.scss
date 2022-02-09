@@ -85,7 +85,13 @@ h3 {
   padding: 0 405px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1650px) {
+  .container {
+    padding: 0 200px;
+  }
+}
+
+@media (max-width: 1280px) {
   .container {
     padding: 0 109px 0 191px;
   }
@@ -217,7 +223,13 @@ header {
   background-color: $dark;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1650px) {
+  .sticky {
+    padding: 20px 200px;
+  }
+}
+
+@media (max-width: 1280px) {
   .sticky {
     padding: 20px 109px 20px 191px;
   }
@@ -226,6 +238,12 @@ header {
 @media (max-width: 768px) {
   .sticky {
     padding: 20px 35px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .header-top.sticky .header-top__phone {
+    margin-top: 20px;
   }
 }
 
@@ -289,6 +307,14 @@ header {
   }
   &__social {
     display: none;
+  }
+}
+
+@media (max-width: 1440px) {
+  .navigation {
+    &__link {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -445,7 +471,7 @@ header {
     @extend %disp-flex-col;
     justify-content: flex-start;
     align-items: flex-start;
-    min-width: 540px;
+    max-width: 540px;
     padding-top: 115px;
     margin-right: 125px;
     &>p,a {
@@ -455,6 +481,43 @@ header {
   &__slider {
     @extend %disp-flex-col;
     width: 370px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header-main {
+  &__description {
+    margin-right: 70px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header-main {
+    padding-top: 230px;
+  &__description {
+    padding-top: 0;
+    margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header-main {
+    justify-content: center;
+    padding-top: 170px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-main {
+    padding-top: 115px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-main {
+    padding-top: 80px;
   }
 }
 
