@@ -120,7 +120,14 @@ h2 {
 h3 {
   font-family: 'OpenSansCondensed-Bold', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 21px;
+  letter-spacing: 0.1em;
+}
+
+h4 {
+  font-family: 'OpenSansCondensed-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
   letter-spacing: 0.05em;
 }
 
@@ -164,6 +171,33 @@ header {
   header {
     min-height: 600px;
   }
+}
+
+section {
+  width: 100%;
+  margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 769px) {
+  section .contacts {
+    margin-top: 120px;
+  }
+}
+
+section span {
+  color: #d1a954;
 }
 
 .header-top a:hover,
@@ -723,4 +757,89 @@ header {
 .button:hover {
   background-color: #fff;
   color: #d1a954;
+}
+
+.section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    margin-top: 60px;
+  }
+}
+
+.section-title {
+  text-align: center;
+}
+
+.best-theatre {
+  max-width: 445px;
+}
+
+.best-theatre__content {
+  margin-top: 40px;
+}
+
+.theatre-numbers__content {
+  margin-top: 40px;
+}
+
+.theatre-numbers__image {
+  margin-bottom: 15px;
+}
+
+.theatre-numbers__stage {
+  margin-top: 20px;
+}
+
+@media (max-width: 1450px) {
+  .theatre-image {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .section-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .best-theatre {
+    max-width: 100%;
+    text-align: center;
+  }
+  .theatre-numbers {
+    margin-top: 60px;
+  }
+  .theatre-numbers__title {
+    text-align: center;
+  }
+  .theatre-numbers__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .theatre-numbers__armchair {
+    margin-right: 60px;
+  }
+  .theatre-numbers__stage {
+    margin-top: 0;
+  }
 }
