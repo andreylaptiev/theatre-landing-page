@@ -44,11 +44,17 @@ socialImages.forEach(image => image.addEventListener('mouseout', defaultImage));
 
 // sticky navbar
 const navbar = document.querySelector('.header-top');
+const navbarPhone = document.querySelector('.header-top__phone');
+// media query to hide phone number
+const hidePhone = window.matchMedia('(min-width: 769px) and (max-width: 992px');
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= 20)
+  if (window.scrollY >= 20) {
     navbar.classList.add('sticky');
-  else
+    (hidePhone.matches) ? (navbarPhone.style.display = 'none') : false;
+  } else {
     navbar.classList.remove('sticky');
+    (hidePhone.matches) ? (navbarPhone.style.display = 'flex') : false;
+  }
 });
 
 
