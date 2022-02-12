@@ -662,3 +662,74 @@ section span {
     }
   }
 }
+
+.products-items {
+  &__item {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(51, 51, 51, 0.65);
+    }
+  }
+  &__title {
+    font-size: 24px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    z-index: 2;
+  }
+  &__date {
+    font-family: 'OpenSansCondensed-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    transform: rotate(-180deg);
+    writing-mode: vertical-rl;
+    z-index: 2;
+  }
+  &__zoom {
+    display: none;
+    position: absolute;
+    left: 171px;
+    top: 225px;
+  }
+}
+
+.products-items__item:hover {
+  cursor: pointer;
+  &::before {
+    content: none;
+  }
+  .products-items__title,
+  .products-items__date {
+    display: none;
+  }
+  .products-items__zoom {
+    display: block;
+  }
+}
+
+.products-items.swiper {
+  width: 100%;
+  height: 550px;
+}
+
+.products-items .swiper-slide {
+  width: 442px;
+}
+
+@media (min-width: 993px) {
+  .products .container {
+    padding: 0 0 0 150px;
+  }
+  .products .section-title {
+    padding-right: 150px;
+  }
+}
