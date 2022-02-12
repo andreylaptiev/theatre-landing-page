@@ -59,9 +59,16 @@ window.addEventListener('scroll', () => {
 
 
 // header-main swiper
-const headerSwiper = new Swiper('.swiper', {
+const headerSwiper = new Swiper('#header-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+});
+
+
+// products section swiper
+const productsSwiper = new Swiper('#products-slider', {
+  slidesPerView: 'auto',
+  // spaceBetween: 0,
 });
