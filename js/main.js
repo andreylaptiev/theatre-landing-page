@@ -70,5 +70,10 @@ const headerSwiper = new Swiper('#header-slider', {
 // products section swiper
 const productsSwiper = new Swiper('#products-slider', {
   slidesPerView: 'auto',
-  // spaceBetween: 0,
+});
+
+// partners section swiper
+const partnersSwiper = new Swiper('#partners-slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 78,
 });
