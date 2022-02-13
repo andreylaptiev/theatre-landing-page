@@ -148,7 +148,7 @@ section {
 }
 
 @media (min-width: 769px) {
-  section .contacts {
+  .contacts {
     margin-top: 120px;
   }
 }
@@ -377,8 +377,7 @@ section span {
     top: 0;
     left: -100%;
     width: 300px;
-    height: 800px;
-    max-height: 100%;
+    height: 100%;
     padding: 140px 39px 50px 39px;
     background-color: $dark;
     z-index: 3;
@@ -428,7 +427,6 @@ section span {
 
 @media (max-width: 576px) {
   .navigation {
-    height: 600px;
     padding: 100px 39px 50px 39px;
     transition: all 1s ease;
     &::before {
@@ -854,4 +852,206 @@ section span {
 
 .partners-items__item>img:first-child {
   margin-bottom: 80px;
+}
+
+address {
+  font-style: normal;
+}
+
+.contacts {
+  &__content {
+    padding-bottom: 80px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__phones,
+  &__addresses {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &>a {
+      font-size: 16px;
+    }
+  }
+  &__phone {
+    margin-bottom: 25px;
+  }
+  &__address {
+    margin-bottom: 25px;
+    &:last-child {
+      line-height: 1.5;
+    }
+  }
+  &__inputs {
+    display: grid;
+    grid-template-columns: 180px 180px 310px;
+    grid-template-rows: 35px 35px;
+    gap: 30px 30px;
+    grid-template-areas: 
+      'default default wide'
+      'default default wide';
+  }
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  &__text {
+    max-width: 390px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $grey;
+  }
+  &__button.button {
+    width: 190px;
+    padding: 0;
+  }
+}
+
+.input-name,
+.input-company,
+.input-phone,
+.input-email {
+  grid-area: default;
+}
+
+.input-message {
+  grid-area: wide;
+  padding-bottom: 65px;
+}
+
+@media (max-width: 992px) {
+  .contacts .section-content {
+    flex-direction: column-reverse;
+  }
+  .contacts {
+    &__info {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 80px;
+    }
+    &__addresses {
+      display: flex;
+      align-items: flex-end;
+    }
+    &__phones,
+    &__addresses {
+      &>a:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__inputs {
+      grid-template-columns: 180px 180px 270px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    &__content {
+      padding-bottom: 60px;
+    }
+    &__info {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contacts {
+    &__info {
+      margin-top: 50px;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__inputs {
+      grid-template-columns: 230px 230px;
+      grid-template-rows: 35px 35px 100px;
+      gap: 30px 50px;
+      grid-template-areas: 
+      'default default'
+      'default default'
+      'wide wide';
+    }
+    &__description {
+      flex-direction: column-reverse;
+    }
+    &__text {
+      max-width: 435px;
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
+  .input-name,
+  .input-company,
+  .input-phone,
+  .input-email {
+    grid-area: default;
+  }
+
+  .input-message {
+    grid-area: wide;
+  }
+}
+
+@media (max-width: 550px) {
+  .contacts {
+    &__info {
+      flex-direction: column;
+    }
+    &__phones,
+    &__addresses {
+      align-items: center;
+    }
+    &__phones>a:last-child {
+      margin-bottom: 25px;
+    }
+    &__inputs {
+      grid-template-columns: 230px;
+      grid-template-rows: 35px 35px 35px 35px 100px;
+      grid-template-areas: 
+      'default'
+      'default'
+      'default'
+      'default'
+      'wide';
+    }
+  }
+  .input-name,
+  .input-company,
+  .input-phone,
+  .input-email {
+    grid-area: default;
+  }
+
+  .input-message {
+    grid-area: wide;
+  }
+}
+
+input {
+  background-color: #444444;
+  border: 1px solid #616161;
+  outline: none;
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: $grey;
+  padding-left: 15px;
+  &:focus {
+    border-color: #fff;
+    color: #fff;
+  }
 }
